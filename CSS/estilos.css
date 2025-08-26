@@ -4,13 +4,12 @@
     box-sizing: border-box;
 }
 
-/* ====== LAYOUT BASE ====== */
+/* ======  BASE ====== */
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    /* comprimimos la fila "nav" para que NO deje hueco (el nav va dentro del header) */
     grid-template-rows: auto 0 1fr auto;
     grid-template-areas: "header" "nav" "main" "footer";
 }
@@ -173,7 +172,7 @@ h1 span:nth-child(14) {
     background: rgba(231, 210, 131, 0.12);
 }
 
-/* ====== SECCIÓN PRESENTACIÓN (HERO) ====== */
+/* ====== SECCIÓN PRESENTACIÓN ====== */
 .imagenMia {
     color: #181010;
     padding: 2rem;
@@ -224,6 +223,7 @@ h1 span:nth-child(14) {
 }
 
 /* cursor parpadeando @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #D39D55; } }*/
+
 .presentacion .foto {
     flex: 1;
     display: flex;
@@ -296,21 +296,17 @@ h1 span:nth-child(14) {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Cuadro con fondo elegante para el párrafo */
 .sobreMi-texto p {
     background: rgba(243, 233, 220, 0.8);
-    /* color de fondo elegante */
     padding: 1.5rem;
     border-radius: 15px;
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-left: 4px solid #FFDE63;
-    /* línea lateral como experience-item */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* efecto hover */
     animation: slideUp 1s forwards;
     animation-delay: 0.3s;
 }
@@ -323,12 +319,10 @@ h1 span:nth-child(14) {
     }
 }
 
-/* Hover estilo experience-item */
 .sobreMi-texto p:hover {
     transform: translateY(-5px);
     /* ligero desplazamiento hacia arriba */
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
-    /* sombra elegante */
 }
 
 .btn-saberMas {
@@ -347,14 +341,12 @@ h1 span:nth-child(14) {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Hover efecto */
 .btn-saberMas:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
     background: #DCC5B2;
 }
 
-/* Centrado en contenedor */
 .sobreMi-texto {
     display: flex;
     flex-direction: column;
@@ -440,7 +432,7 @@ h1 span:nth-child(14) {
     width: 2px;
     height: 100%;
     background: #C59560;
-    /* línea dorada */
+ 
 }
 
 .timeline-item {
@@ -472,7 +464,6 @@ h1 span:nth-child(14) {
 .timeline-content p {
     margin: 0;
     color: #fff;
-    /* Blanco sobre el video oscuro */
     line-height: 1.6;
 }
 
@@ -501,7 +492,6 @@ h1 span:nth-child(14) {
 
 .habilidad {
     background-color: #F3E9DC;
-    /* tono kaki */
     color: #070708;
     text-align: center;
     padding: 5rem;
@@ -565,7 +555,6 @@ h1 span:nth-child(14) {
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-left: 4px solid #FFDE63;
-    /* borde dorado */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
@@ -717,14 +706,10 @@ h1 span:nth-child(14) {
 /* ===== FORMULARIO ===== */
 .formulario-contacto {
     max-width: 380px;
-    /* define el ancho máximo de la caja */
     width: 100%;
-    /* se adapta a pantallas pequeñas */
     margin: 0 auto;
-    /* centra la caja */
     padding: 1.5rem;
     background: #fff;
-    /* fondo blanco para que resalte */
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
@@ -870,7 +855,7 @@ textarea {
     display: none;
 }
 
-/* ====== GRID DE MAIN (MÓVIL) ====== */
+/* ====== GRID DE MAIN (Celular) ====== */
 main {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto auto;
@@ -908,12 +893,11 @@ main {
 /* ====== CELULAR (<600px) ====== */
 @media (max-width: 599px) {
 
-    /* ocultar nav en celular */
+   
     .header-nav {
         display: none;
     }
 
-    /* h1 más pequeño para que no rompa el header */
     h1 {
         font-size: 42px;
     }
